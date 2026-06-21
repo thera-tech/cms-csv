@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { DeliverableExplorer } from "@/content/../components/deliverable-explorer";
+import { DeliverableExplorer } from "@/components/deliverable-explorer";
 import { DELIVERABLES } from "@/content/deliverables";
 
 export const Route = createFileRoute("/")({
