@@ -72,7 +72,7 @@ function DeliverablePage() {
             <div className="flex items-center gap-1.5">
               <Tag className="h-3.5 w-3.5" />
               <dd className="flex flex-wrap gap-1.5">
-                {d.tags.map((t) => (
+                {d.tags.map((t: string) => (
                   <span
                     key={t}
                     className="rounded-sm bg-accent px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-accent-foreground"
