@@ -97,6 +97,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Portal interno do Grupo CSV para navegar relatórios, dashboards, documentos e assets.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "CMS CSV — Portal de Entregáveis" },
+      { name: "description", content: "Deliverable Hub is a static visual CMS for organizing and presenting internal project deliverables." },
+      { property: "og:description", content: "Deliverable Hub is a static visual CMS for organizing and presenting internal project deliverables." },
+      { name: "twitter:description", content: "Deliverable Hub is a static visual CMS for organizing and presenting internal project deliverables." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/df20c445-e06d-487f-b6c4-0fb3456b78f2/id-preview-4276da3c--1fd272e9-12b7-4b6c-b083-92117e7149e8.lovable.app-1782085585665.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/df20c445-e06d-487f-b6c4-0fb3456b78f2/id-preview-4276da3c--1fd272e9-12b7-4b6c-b083-92117e7149e8.lovable.app-1782085585665.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
