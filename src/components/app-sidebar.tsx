@@ -5,13 +5,12 @@ import {
   Folder,
   Gauge,
   Image as ImageIcon,
-  LayoutDashboard,
   Clock,
 } from "lucide-react";
-
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -44,17 +43,31 @@ export function AppSidebar() {
       <SidebarHeader>
         <Link
           to="/"
-          className="flex items-center gap-2 px-2 py-2 text-sidebar-foreground"
+          className="flex items-center gap-3 px-2 py-3 text-sidebar-foreground transition-opacity hover:opacity-80"
         >
-          <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary/15 text-primary">
-            <LayoutDashboard className="h-4 w-4" />
-          </div>
-          {!collapsed && (
-            <div className="flex flex-col leading-tight">
-              <span className="text-sm font-semibold tracking-tight">CMS · CSV</span>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-                portal interno
-              </span>
+          {collapsed ? (
+            <div className="flex h-8 w-8 items-center justify-center">
+              <img
+                src="/logo-grupo-csv.png"
+                alt="Grupo CSV"
+                className="h-6 w-auto object-contain"
+              />
+            </div>
+          ) : (
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo-grupo-csv.png"
+                alt="Grupo CSV"
+                className="h-7 w-auto object-contain"
+              />
+              <div className="flex flex-col leading-tight">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+                  CMS
+                </span>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
+                  Portal Interno
+                </span>
+              </div>
             </div>
           )}
         </Link>
@@ -62,7 +75,7 @@ export function AppSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Diretório</SidebarGroupLabel>
+          <SidebarGroupLabel>Diretorio</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -116,6 +129,16 @@ export function AppSidebar() {
           </SidebarGroup>
         )}
       </SidebarContent>
+
+      <SidebarFooter>
+        {!collapsed && (
+          <div className="border-t border-sidebar-border px-3 py-3">
+            <p className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
+              Grupo CSV &middot; Thera Tech
+            </p>
+          </div>
+        )}
+      </SidebarFooter>
     </Sidebar>
   );
 }
